@@ -3,6 +3,7 @@ import React from 'react'
 import { SignedIn, SignedOut } from '@clerk/nextjs'
 import request from 'superagent'
 import { Post } from '@/models/post'
+import PostComponent from '@/components/PostComponent'
 
 export default async function Home() {
   const user = await currentUser()
@@ -15,8 +16,8 @@ export default async function Home() {
     <SignedIn>
       <div className='w-full h-full flex flex-col justify-start items-center'>
         <h1 className='text-5xl'>Main feed:</h1>
-        <ul>
-          {mostRecent.map(post => <li key={post.id}>{post.title}</li>)}
+        <ul className='w-full flex-col gap-3'>
+          {mostRecent.map(post => <PostComponent key={post.id} post={post} />)}
         </ul>
       </div>
     </SignedIn>

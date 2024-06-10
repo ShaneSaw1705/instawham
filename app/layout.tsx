@@ -36,9 +36,12 @@ export default async function RootLayout({
                   <UserButton />
                   <Link href={'/'}>{user?.fullName}</Link>
                 </div>
-                <ul>
+                <ul className="flex flex-col">
                   <Link href={'/createpost'}>
-                  <button className="hover:translate-x-2 transition-all ease-out 200ms">make a post</button>
+                    <button className="hover:translate-x-2 hover:underline transition-all ease-out 200ms">make a post</button>
+                  </Link>
+                  <Link href={'/myposts'}>
+                    <button className="hover:translate-x-2 hover:underline transition-all ease-out 200ms">my posts</button>
                   </Link>
                 </ul>
               </SignedIn>
