@@ -35,6 +35,9 @@ export default async function RootLayout({
                   <UserButton />
                   <p>{user?.fullName}</p>
                 </div>
+                <ul>
+                  <button className="hover:translate-x-2 transition-all ease-out 200ms">make a post</button>
+                </ul>
               </SignedIn>
               <SignedOut>
                 <SignInButton>
