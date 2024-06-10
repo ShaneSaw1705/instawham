@@ -9,6 +9,7 @@ import {
 } from '@clerk/nextjs'
 import "./globals.css";
 import { currentUser } from "@clerk/nextjs/server";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,10 +34,12 @@ export default async function RootLayout({
               <SignedIn>
                 <div className="flex flex-row gap-2 items-center justify-start border-b-2 border-cyan-800 py-2">
                   <UserButton />
-                  <p>{user?.fullName}</p>
+                  <Link href={'/'}>{user?.fullName}</Link>
                 </div>
                 <ul>
+                  <Link href={'/createpost'}>
                   <button className="hover:translate-x-2 transition-all ease-out 200ms">make a post</button>
+                  </Link>
                 </ul>
               </SignedIn>
               <SignedOut>
