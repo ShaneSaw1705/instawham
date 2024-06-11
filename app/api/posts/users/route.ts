@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
     const userId = req.nextUrl.searchParams.get('user_id')
     const posts = await prisma.post.findMany({
       where: {
-        user_id: userId
+        user_id: userId || ''
       }
     })
     return NextResponse.json(posts)
