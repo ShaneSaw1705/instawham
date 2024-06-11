@@ -30,7 +30,7 @@ export default async function RootLayout({
       <html lang="en">
         <body>
           <div className="flex flex-row w-screen h-full">
-            <div className="flex flex-col w-48 h-screen bg-slate-100 text-cyan-800 px-2 py-3">
+            <div className="flex flex-col w-48 h-screen sticky top-0 bg-slate-100 text-cyan-800 px-2 py-3">
               <SignedIn>
                 <div className="flex flex-row gap-2 items-center justify-start border-b-2 border-cyan-800 py-2">
                   <UserButton />

@@ -17,7 +17,7 @@ export default async function Home() {
       <div className='w-full h-full flex flex-col justify-start items-center'>
         <h1 className='text-5xl'>Main feed:</h1>
         <ul className='w-full flex-col gap-3'>
-          {mostRecent.map(post => <PostComponent key={post.id} post={post} />)}
+          {mostRecent.map(post => <PostComponent currentUserId={user?.id} key={post.id} post={post} />)}
         </ul>
       </div>
     </SignedIn>

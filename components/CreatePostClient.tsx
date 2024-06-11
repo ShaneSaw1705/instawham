@@ -47,7 +47,7 @@ export default function CreatePostClient(props: Props) {
         </label>
         <label htmlFor="content" className='flex flex-col justify-center items-center'>
           Content
-          <input className='text-black flex flex-col items-start justify-start text-start rounded-md h-28' id='content' name='content' type="text" value={post.content} onChange={handleChange} />
+          <textarea className='text-black flex flex-col items-start justify-start text-start rounded-md h-28' id='content' name='content' value={post.content} onChange={handleChange} />
         </label>
         <button type="submit">Post</button>
       </form>
